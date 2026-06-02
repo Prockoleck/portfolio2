@@ -171,21 +171,6 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center gap-1.5"
-        >
-          <span className="text-[10px] font-medium tracking-widest text-muted uppercase">Scroll</span>
-          <div className="h-6 w-px bg-black/15" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }
