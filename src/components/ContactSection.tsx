@@ -82,14 +82,14 @@ export default function ContactSection() {
                 </div>
               </a>
 
-              <a href="mailto:hello@websitedevelopmentindia.com"
+              <a href="mailto:proshorts71@gmail.com"
                 className="glass-card group flex items-center gap-4 rounded-2xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-white shadow-lg">
                   <Mail size={22} />
                 </div>
                 <div>
                   <p className="text-sm font-semibold">Email</p>
-                  <p className="text-sm text-muted">hello@websitedevelopmentindia.com</p>
+                  <p className="text-sm text-muted">proshorts71@gmail.com</p>
                 </div>
               </a>
 
