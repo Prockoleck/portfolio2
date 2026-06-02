@@ -141,30 +141,12 @@ export default function HeroSection() {
                 y: useTransform(orbY, [0, 1], [-20, 20]),
               }}
             />
-            <div className="relative mx-auto w-64">
+            <div className="relative mx-auto w-80">
               <img
                 src="/ChatGPT Image Jun 2, 2026, 05_03_13 PM.png"
                 alt="ChatGPT"
                 className="h-full w-full object-cover"
               />
-
-              {/* Curved arrow pointing to ME */}
-              <div className="absolute -top-40 left-1/2 -translate-x-1/2">
-                <svg width="160" height="160" viewBox="0 0 160 160" fill="none" className="overflow-visible">
-                  <path
-                    d="M80 155 C 60 120, 30 80, 30 20"
-                    stroke="black"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    fill="none"
-                    strokeDasharray="4 3"
-                  />
-                  <polygon points="30,20 38,28 26,32" fill="black" />
-                </svg>
-                <span className="absolute -top-1 left-[22px] -rotate-[20deg] text-xl font-caveat">
-                  ME
-                </span>
-              </div>
             </div>
           </Reveal>
         </motion.div>
