@@ -101,7 +101,7 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
   const handleEnter = () => setHovered(true);
   const handleLeave = () => { setHovered(false); setMousePos({ x: 0, y: 0 }); };
 
-  const reverse = index === 2;
+  const reverse = index >= 1;
   const slideFrom = reverse ? 1 : -1;
 
   return (
