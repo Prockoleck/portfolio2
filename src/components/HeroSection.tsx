@@ -128,7 +128,7 @@ export default function HeroSection() {
           </Reveal>
         </motion.div>
 
-        {/* Right: Laptop Mockup */}
+        {/* Right: ChatGPT Image */}
         <motion.div
           style={{ y: laptopY, scale: laptopScale }}
           className="relative hidden lg:block"
@@ -142,30 +142,13 @@ export default function HeroSection() {
               }}
             />
             <div className="relative mx-auto w-full max-w-lg">
-              <div className="relative overflow-hidden rounded-2xl border border-black/5 bg-gradient-to-br from-gray-900 to-gray-800 shadow-2xl aspect-[4/3]">
-                <div className="flex items-center gap-1.5 border-b border-white/10 px-4 py-2.5">
-                  <div className="h-2.5 w-2.5 rounded-full bg-red-400" />
-                  <div className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
-                  <div className="h-2.5 w-2.5 rounded-full bg-green-400" />
-                  <div className="ml-4 h-5 flex-1 rounded-md bg-white/10" />
-                </div>
-                <div className="p-4">
-                  <div className="mb-3 h-3 w-24 rounded bg-white/15" />
-                  <div className="mb-4 h-5 w-48 rounded bg-white/20" />
-                  <div className="mb-3 grid grid-cols-3 gap-2">
-                    {[...Array(3)].map((_, i) => (
-                      <div key={i} className="aspect-square rounded-lg bg-white/8" />
-                    ))}
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="h-6 flex-1 rounded bg-primary/50" />
-                    <div className="h-6 w-16 rounded bg-white/10" />
-                  </div>
-                </div>
-                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,transparent_40%,rgba(255,255,255,0.03)_50%,transparent_60%)]" />
+              <div className="relative overflow-hidden rounded-2xl border border-black/5 shadow-2xl">
+                <img
+                  src="/ChatGPT Image Jun 2, 2026, 05_03_13 PM.png"
+                  alt="ChatGPT"
+                  className="h-full w-full object-cover"
+                />
               </div>
-              <div className="relative mx-auto -mt-1 h-3 w-[105%] rounded-b-[12px] bg-gradient-to-b from-gray-200 to-gray-300 shadow-lg" />
-              <div className="mx-auto h-1 w-1/3 rounded-full bg-gray-300" />
             </div>
           </Reveal>
         </motion.div>
