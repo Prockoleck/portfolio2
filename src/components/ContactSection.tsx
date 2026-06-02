@@ -71,14 +71,14 @@ export default function ContactSection() {
           {/* Left: Contact Info */}
           <Reveal direction="left" delay={0.2}>
             <div className="space-y-6">
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+              <a href="https://wa.me/917006296494" target="_blank" rel="noopener noreferrer"
                 className="glass-card group flex items-center gap-4 rounded-2xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#25D366] text-white shadow-lg">
                   <MessageCircle size={22} />
                 </div>
                 <div>
                   <p className="text-sm font-semibold">WhatsApp</p>
-                  <p className="text-sm text-muted">+91 98765 43210</p>
+                  <p className="text-sm text-muted">+91 70092 96494</p>
                 </div>
               </a>
 
