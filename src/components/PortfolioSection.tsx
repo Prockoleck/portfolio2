@@ -1,15 +1,29 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Reveal from "./Reveal";
 
 const projects = [
-  { title: "UrbanCart", desc: "Modern e-commerce platform with real-time inventory and AI-powered recommendations.", tag: "E-commerce", gradient: "from-emerald-500 to-teal-600", initials: "UC" },
-  { title: "MediFlow", desc: "Patient portal with telemedicine, appointment scheduling, and EHR integration.", tag: "Healthcare", gradient: "from-blue-500 to-indigo-600", initials: "MF" },
-  { title: "EduSpark", desc: "Interactive learning platform with live classes, quizzes, and progress tracking.", tag: "EdTech", gradient: "from-violet-500 to-purple-600", initials: "ES" },
-  { title: "PropView", desc: "Real estate marketplace with 3D tours, mortgage calculator, and agent matching.", tag: "Real Estate", gradient: "from-rose-500 to-pink-600", initials: "PV" },
+  {
+    video: "ecommerce store.mp4",
+    title: "Ecommerce Store",
+    desc: "A fully responsive modern e-commerce platform with seamless checkout, product management, and payment integration built for scale.",
+    tag: "E-commerce",
+  },
+  {
+    video: "gym.mp4",
+    title: "Gym & Fitness",
+    desc: "A dynamic fitness brand website featuring class scheduling, trainer profiles, membership plans, and engaging visuals.",
+    tag: "Health & Fitness",
+  },
+  {
+    video: "real estate.mp4",
+    title: "Real Estate",
+    desc: "A premium real estate marketplace with property listings, virtual tours, mortgage calculators, and agent matching.",
+    tag: "Real Estate",
+  },
 ];
 
 export default function PortfolioSection() {
@@ -18,7 +32,6 @@ export default function PortfolioSection() {
 
   return (
     <section id="portfolio" ref={ref} className="relative overflow-hidden px-6 py-24 sm:px-8">
-      {/* Parallax shapes */}
       <motion.div
         className="pointer-events-none absolute top-1/3 -left-10 h-40 w-40 rounded-full border border-primary/5"
         animate={{ y: [0, -25, 0] }}
@@ -40,7 +53,7 @@ export default function PortfolioSection() {
           </div>
         </Reveal>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="space-y-16">
           {projects.map((p, i) => (
             <ProjectCard key={p.title} project={p} index={i} inView={inView} />
           ))}
@@ -52,6 +65,8 @@ export default function PortfolioSection() {
 
 function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]; index: number; inView: boolean }) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [hovered, setHovered] = useState(false);
 
   const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = cardRef.current;
@@ -59,57 +74,86 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
     const rect = card.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
     const y = (e.clientY - rect.top) / rect.height - 0.5;
-    card.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
-  };
-  const handleLeave = () => {
-    const card = cardRef.current;
-    if (!card) return;
-    card.style.transform = "perspective(1000px) rotateY(0deg) rotateX(0deg)";
+    setMousePos({ x, y });
   };
 
+  const handleEnter = () => setHovered(true);
+  const handleLeave = () => { setHovered(false); setMousePos({ x: 0, y: 0 }); };
+
+  const reverse = index === 2;
+
   return (
-    <Reveal direction={index % 2 === 0 ? "left" : "right"} delay={index * 0.1}>
+    <Reveal direction={reverse ? "right" : "left"} delay={index * 0.12}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: index * 0.12, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="group relative"
       >
         <div
           ref={cardRef}
           onMouseMove={handleMouse}
+          onMouseEnter={handleEnter}
           onMouseLeave={handleLeave}
-          style={{ transformStyle: "preserve-3d" }}
-          className="transition-transform duration-200 ease-out"
+          className="group cursor-default"
         >
-          <div className={`relative mb-4 flex h-56 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br ${project.gradient} sm:h-64`}>
-            <motion.div
-              className="absolute inset-0 bg-black/10"
-              initial={{ scale: 1 }}
-              whileInView={{ scale: 1.08 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            />
-            <motion.span
-              className="text-6xl font-bold text-white/20 sm:text-7xl"
-              initial={{ scale: 0.9 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-            >
-              {project.initials}
-            </motion.span>
-            <div className="absolute top-4 left-4 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-              {project.tag}
+          <motion.div
+            animate={{
+              rotateX: mousePos.y * -15,
+              rotateY: mousePos.x * 15,
+              scale: hovered ? 1.02 : 1,
+            }}
+            transition={{ type: "spring", stiffness: 120, damping: 12, mass: 0.15 }}
+            style={{ transformStyle: "preserve-3d" }}
+            className={`relative flex flex-col overflow-hidden rounded-3xl border bg-white shadow-lg transition-shadow duration-300 ${
+              hovered ? "shadow-xl shadow-black/10" : "shadow-black/5"
+            } ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}
+          >
+            {/* Video side */}
+            <div className="relative aspect-video w-full shrink-0 overflow-hidden lg:w-1/2 lg:aspect-auto">
+              <video
+                src={`/${project.video}`}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/10" />
+              <div className="absolute top-4 left-4 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                {project.tag}
+              </div>
             </div>
-            <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
-              <a href="#" className="inline-flex items-center gap-1.5 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black transition-all hover:bg-white/90">
-                Live Demo <ArrowUpRight size={14} />
-              </a>
+
+            {/* Text side */}
+            <div className="flex flex-1 flex-col justify-center px-6 py-8 sm:px-10">
+              <motion.span
+                className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary"
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                Featured Project
+              </motion.span>
+              <motion.h3
+                className="text-2xl font-bold tracking-tight sm:text-3xl"
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                {project.title}
+              </motion.h3>
+              <motion.p
+                className="mt-3 text-sm leading-relaxed text-muted sm:text-base"
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                {project.desc}
+              </motion.p>
+              <motion.div className="mt-6" style={{ transformStyle: "preserve-3d" }}>
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
+                >
+                  Live Demo <ArrowUpRight size={14} />
+                </a>
+              </motion.div>
             </div>
-          </div>
-          <h3 className="text-lg font-semibold">{project.title}</h3>
-          <p className="mt-1 text-sm text-muted">{project.desc}</p>
+          </motion.div>
         </div>
       </motion.div>
     </Reveal>
