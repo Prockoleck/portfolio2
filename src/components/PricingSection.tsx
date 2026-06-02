@@ -55,11 +55,7 @@ function PricingCard({ plan, index, inView }: { plan: (typeof plans)[0]; index: 
               : "shadow-black/5"
           }`}
         >
-          <div className={`relative rounded-[inherit] p-8 ${
-            plan.popular
-              ? "bg-gradient-to-b from-primary/[0.04] to-transparent"
-              : "bg-white"
-          }`}>
+          <div className="relative rounded-[inherit] bg-white p-8">
             {/* Liquid fill overlay */}
             <div className="absolute inset-0 overflow-hidden rounded-[inherit] pointer-events-none">
               <motion.div
