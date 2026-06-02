@@ -141,31 +141,27 @@ export default function HeroSection() {
                 y: useTransform(orbY, [0, 1], [-20, 20]),
               }}
             />
-            <div className="relative mx-auto w-72">
-              <div className="relative overflow-hidden rounded-2xl border border-black/5 shadow-2xl">
-                <img
-                  src="/ChatGPT Image Jun 2, 2026, 05_03_13 PM.png"
-                  alt="ChatGPT"
-                  className="h-full w-full object-cover"
-                />
-              </div>
+            <div className="relative mx-auto w-64">
+              <img
+                src="/ChatGPT Image Jun 2, 2026, 05_03_13 PM.png"
+                alt="ChatGPT"
+                className="h-full w-full object-cover"
+              />
 
               {/* Curved arrow pointing to ME */}
-              <div className="absolute -top-28 -right-16">
-                <svg width="140" height="120" viewBox="0 0 140 120" fill="none" className="overflow-visible">
+              <div className="absolute -top-40 left-1/2 -translate-x-1/2">
+                <svg width="160" height="160" viewBox="0 0 160 160" fill="none" className="overflow-visible">
                   <path
-                    d="M130 110 C 100 80, 80 30, 30 10"
+                    d="M80 155 C 60 120, 30 80, 30 20"
                     stroke="black"
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     fill="none"
                     strokeDasharray="4 3"
                   />
-                  <polygon points="30,10 38,18 26,22" fill="black" />
+                  <polygon points="30,20 38,28 26,32" fill="black" />
                 </svg>
-                <span
-                  className="absolute -top-1 left-[18px] rotate-[-20deg] text-lg font-bold tracking-tight font-caveat"
-                >
+                <span className="absolute -top-1 left-[22px] -rotate-[20deg] text-xl font-caveat">
                   ME
                 </span>
               </div>
