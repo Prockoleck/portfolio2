@@ -104,54 +104,56 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
             }}
             transition={{ type: "spring", stiffness: 120, damping: 12, mass: 0.15 }}
             style={{ transformStyle: "preserve-3d" }}
-            className={`relative flex flex-col overflow-hidden rounded-3xl border bg-white shadow-lg transition-shadow duration-300 ${
+            className={`relative rounded-3xl bg-gradient-to-br from-pink-400 via-purple-400 to-cyan-400 p-[2px] shadow-lg transition-shadow duration-300 ${
               hovered ? "shadow-xl shadow-black/10" : "shadow-black/5"
-            } ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}
+            }`}
           >
-            {/* Video side */}
-            <div className="relative aspect-video w-full shrink-0 overflow-hidden lg:w-1/2">
-              <video
-                src={`/${project.video}`}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/10" />
-              <div className="absolute top-4 left-4 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-                {project.tag}
+            <div className={`flex flex-col overflow-hidden rounded-[inherit] bg-white ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
+              {/* Video side */}
+              <div className="relative aspect-video w-full shrink-0 overflow-hidden lg:w-1/2">
+                <video
+                  src={`/${project.video}`}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/10" />
+                <div className="absolute top-4 left-4 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                  {project.tag}
+                </div>
               </div>
-            </div>
 
-            {/* Text side */}
-            <div className="flex flex-1 flex-col justify-center px-6 py-8 sm:px-10">
-              <motion.span
-                className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary"
-                style={{ transformStyle: "preserve-3d" }}
-              >
-                Featured Project
-              </motion.span>
-              <motion.h3
-                className="text-2xl font-bold tracking-tight sm:text-3xl"
-                style={{ transformStyle: "preserve-3d" }}
-              >
-                {project.title}
-              </motion.h3>
-              <motion.p
-                className="mt-3 text-sm leading-relaxed text-muted sm:text-base"
-                style={{ transformStyle: "preserve-3d" }}
-              >
-                {project.desc}
-              </motion.p>
-              <motion.div className="mt-6" style={{ transformStyle: "preserve-3d" }}>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
+              {/* Text side */}
+              <div className="flex flex-1 flex-col justify-center px-6 py-8 sm:px-10">
+                <motion.span
+                  className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary"
+                  style={{ transformStyle: "preserve-3d" }}
                 >
-                  Live Demo <ArrowUpRight size={14} />
-                </a>
-              </motion.div>
+                  Featured Project
+                </motion.span>
+                <motion.h3
+                  className="text-2xl font-bold tracking-tight sm:text-3xl"
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  {project.title}
+                </motion.h3>
+                <motion.p
+                  className="mt-3 text-sm leading-relaxed text-muted sm:text-base"
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  {project.desc}
+                </motion.p>
+                <motion.div className="mt-6" style={{ transformStyle: "preserve-3d" }}>
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
+                  >
+                    Live Demo <ArrowUpRight size={14} />
+                  </a>
+                </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>
