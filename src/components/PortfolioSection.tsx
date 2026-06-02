@@ -63,10 +63,31 @@ export default function PortfolioSection() {
   );
 }
 
+function TypewriterText({ text, startDelay }: { text: string; startDelay: number }) {
+  const chars = text.split("");
+  return (
+    <span>
+      {chars.map((ch, i) => (
+        <motion.span
+          key={i}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: startDelay + i * 0.06, duration: 0.01 }}
+          className="inline"
+        >
+          {ch}
+        </motion.span>
+      ))}
+    </span>
+  );
+}
+
 function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]; index: number; inView: boolean }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
+  const cardInViewRef = useRef<HTMLDivElement>(null);
+  const cardInView = useInView(cardInViewRef, { once: true, margin: "-100px" });
 
   const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = cardRef.current;
@@ -81,9 +102,10 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
   const handleLeave = () => { setHovered(false); setMousePos({ x: 0, y: 0 }); };
 
   const reverse = index === 2;
+  const slideFrom = reverse ? 1 : -1;
 
   return (
-    <Reveal direction={reverse ? "right" : "left"} delay={index * 0.12}>
+    <div ref={cardInViewRef}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -110,7 +132,12 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
           >
             <div className={`flex flex-col overflow-hidden rounded-[inherit] bg-white ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
               {/* Video side */}
-              <div className="relative aspect-video w-full shrink-0 overflow-hidden lg:w-1/2">
+              <motion.div
+                className="relative aspect-video w-full shrink-0 overflow-hidden lg:w-1/2"
+                initial={{ x: `${slideFrom * 120}%` }}
+                animate={cardInView ? { x: "0%" } : {}}
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              >
                 <video
                   src={`/${project.video}`}
                   autoPlay
@@ -123,7 +150,7 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
                 <div className="absolute top-4 left-4 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
                   {project.tag}
                 </div>
-              </div>
+              </motion.div>
 
               {/* Text side */}
               <div className="flex flex-1 flex-col justify-center px-6 py-8 sm:px-10">
@@ -131,21 +158,27 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
                   className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary"
                   style={{ transformStyle: "preserve-3d" }}
                 >
-                  Featured Project
+                  <TypewriterText text="Featured Project" startDelay={1.3 + index * 0.15} />
                 </motion.span>
                 <motion.h3
                   className="text-2xl font-bold tracking-tight sm:text-3xl"
                   style={{ transformStyle: "preserve-3d" }}
                 >
-                  {project.title}
+                  <TypewriterText text={project.title} startDelay={1.6 + index * 0.15} />
                 </motion.h3>
                 <motion.p
                   className="mt-3 text-sm leading-relaxed text-muted sm:text-base"
                   style={{ transformStyle: "preserve-3d" }}
                 >
-                  {project.desc}
+                  <TypewriterText text={project.desc} startDelay={2.0 + index * 0.15} />
                 </motion.p>
-                <motion.div className="mt-6" style={{ transformStyle: "preserve-3d" }}>
+                <motion.div
+                  className="mt-6"
+                  style={{ transformStyle: "preserve-3d" }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={cardInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 3.0 + index * 0.15, duration: 0.5 }}
+                >
                   <a
                     href="#"
                     className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
@@ -158,6 +191,6 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
           </motion.div>
         </div>
       </motion.div>
-    </Reveal>
+    </div>
   );
 }
