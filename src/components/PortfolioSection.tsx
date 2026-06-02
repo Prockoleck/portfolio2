@@ -109,7 +109,7 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
             } ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}
           >
             {/* Video side */}
-            <div className="relative aspect-video w-full shrink-0 overflow-hidden lg:w-1/2 lg:aspect-auto">
+            <div className="relative aspect-video w-full shrink-0 overflow-hidden lg:w-1/2">
               <video
                 src={`/${project.video}`}
                 autoPlay
