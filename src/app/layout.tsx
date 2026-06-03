@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   description:
     "Professional web development services in India. Get a stunning, fast, and SEO-optimized website for your business. Starting at ₹4,999.",
-  metadataBase: new URL("https://websitedevelopmentindia.com"),
+  metadataBase: new URL("https://websitedevelopmentindia.online"),
   alternates: {
     canonical: "/",
   },
@@ -69,7 +69,7 @@ export default function RootLayout({
               name: "Website Development India",
               description:
                 "Professional web development services in India. Stunning, fast, and SEO-optimized websites.",
-              url: "https://websitedevelopmentindia.com",
+              url: "https://websitedevelopmentindia.online",
               areaServed: "IN",
               priceRange: "₹₹",
               offers: {
