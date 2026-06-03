@@ -20,26 +20,32 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "websitedevelopmentindia",
+  title: {
+    template: "%s | Website Development India",
+    default: "Website Development India",
+  },
   description:
-    "Professional web development services. Get a stunning, fast, and SEO-optimized website for your business. Starting at ₹4,999.",
-  keywords: [
-    "web developer",
-    "website design",
-    "ecommerce website",
-    "business website",
-    "SEO optimization",
-    "React developer",
-    "Next.js developer",
-  ],
+    "Professional web development services in India. Get a stunning, fast, and SEO-optimized website for your business. Starting at ₹4,999.",
+  metadataBase: new URL("https://websitedevelopmentindia.com"),
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.png",
   },
   openGraph: {
-  title: "websitedevelopmentindia",
+    title: "Website Development India",
     description:
-      "Professional web development services. Get a stunning, fast, and SEO-optimized website for your business.",
+      "Professional web development services in India. Get a stunning, fast, and SEO-optimized website for your business.",
     type: "website",
+    locale: "en_IN",
+    siteName: "Website Development India",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Development India",
+    description:
+      "Professional web development services in India. Get a stunning, fast, and SEO-optimized website for your business.",
   },
 };
 
@@ -50,10 +56,31 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en-IN"
       className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable}`}
     >
       <body className="bg-white text-foreground antialiased selection:bg-primary selection:text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: "Website Development India",
+              description:
+                "Professional web development services in India. Stunning, fast, and SEO-optimized websites.",
+              url: "https://websitedevelopmentindia.com",
+              areaServed: "IN",
+              priceRange: "₹₹",
+              offers: {
+                "@type": "Offer",
+                price: "4999",
+                priceCurrency: "INR",
+                description: "Website development starting at ₹4,999",
+              },
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
         <Providers>
   {children}
   <WhatsAppCTA />

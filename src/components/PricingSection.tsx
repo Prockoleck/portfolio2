@@ -55,7 +55,14 @@ function PricingCard({ plan, index, inView }: { plan: (typeof plans)[0]; index: 
               : "shadow-black/5"
           }`}
         >
-          <div className="relative rounded-[inherit] bg-white p-8">
+          {plan.popular && (
+            <div className="absolute -top-3.5 left-1/2 z-20 -translate-x-1/2">
+              <span className="inline-flex items-center gap-1 rounded-full bg-primary px-4 py-1 text-xs font-semibold text-white shadow-lg">
+                <Zap size={12} /> Most Popular
+              </span>
+            </div>
+          )}
+          <div className="relative rounded-[inherit] bg-white">
             {/* Liquid fill overlay */}
             <div className="absolute inset-0 overflow-hidden rounded-[inherit] pointer-events-none">
               <motion.div
@@ -76,15 +83,7 @@ function PricingCard({ plan, index, inView }: { plan: (typeof plans)[0]; index: 
               </motion.div>
             </div>
 
-            {plan.popular && (
-              <div className="absolute -top-[22px] left-1/2 -translate-x-1/2">
-                <span className="inline-flex items-center gap-1 rounded-full bg-primary px-4 py-1 text-xs font-semibold text-white shadow-lg">
-                  <Zap size={12} /> Most Popular
-                </span>
-              </div>
-            )}
-
-            <div className="relative z-10">
+            <div className={`relative z-10 ${plan.popular ? "pt-12" : ""} p-8`}>
             <div className="mb-6">
               <h3 className="text-lg font-semibold">{plan.name}</h3>
               <div className="mt-3 flex items-baseline gap-1">

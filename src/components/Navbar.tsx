@@ -3,30 +3,24 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
 ];
-
-function scrollToSection(href: string) {
-  const id = href.replace("#", "");
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: "smooth" });
-}
 
 function NavLink({ label, href, onClick, mobile }: { label: string; href: string; onClick?: () => void; mobile?: boolean }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <motion.button
-      onClick={() => { scrollToSection(href); onClick?.(); }}
+    <Link
+      href={href}
+      onClick={onClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      initial={{ opacity: 0, y: -8 }}
-      animate={{ opacity: 1, y: 0 }}
       className={`relative overflow-hidden text-sm font-medium ${mobile ? "w-full rounded-xl px-4 py-3 text-left" : "rounded-full px-4 py-2"}`}
     >
       <motion.span
@@ -42,7 +36,7 @@ function NavLink({ label, href, onClick, mobile }: { label: string; href: string
       >
         {label}
       </motion.span>
-    </motion.button>
+    </Link>
   );
 }
 
@@ -57,7 +51,7 @@ export default function Navbar() {
       className="fixed top-0 right-0 left-0 z-50 bg-white/80 backdrop-blur-xl border-b border-black/[0.04]"
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <img
             src="/pfp.jpg"
             alt="Logo"
@@ -66,10 +60,10 @@ export default function Navbar() {
           <span className="hidden text-sm font-semibold tracking-tight sm:block">
             websitedevelopmentindia
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-1 md:flex">
-          {links.map((l, i) => (
+          {links.map((l) => (
             <NavLink key={l.label} label={l.label} href={l.href} />
           ))}
           <motion.a
