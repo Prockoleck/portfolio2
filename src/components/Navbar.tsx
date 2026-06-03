@@ -73,7 +73,7 @@ export default function Navbar() {
             <NavLink key={l.label} label={l.label} href={l.href} />
           ))}
           <motion.a
-            href="https://wa.me/917006296494"
+            href="https://wa.me/919465568342"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -107,7 +107,7 @@ export default function Navbar() {
               <NavLink key={l.label} label={l.label} href={l.href} onClick={() => setOpen(false)} mobile />
             ))}
             <a
-              href="https://wa.me/917006296494"
+              href="https://wa.me/919465568342"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 rounded-full bg-primary px-5 py-2.5 text-center text-sm font-medium text-white"

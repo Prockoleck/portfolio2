@@ -100,7 +100,7 @@ function PricingCard({ plan, index, inView }: { plan: (typeof plans)[0]; index: 
               ))}
             </ul>
             <a
-              href="https://wa.me/917006296494" target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/919465568342" target="_blank" rel="noopener noreferrer"
               className={`group inline-flex w-full items-center justify-center gap-2 rounded-full py-3 text-sm font-semibold transition-all ${
                 plan.popular
                   ? "bg-primary text-white shadow-lg shadow-primary/25 hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30"

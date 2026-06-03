@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function WhatsAppCTA() {
   return (
     <motion.a
-      href="https://wa.me/917006296494"
+      href="https://wa.me/919465568342"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
