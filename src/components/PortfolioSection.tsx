@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { ArrowUpRight, X } from "lucide-react";
 import Reveal from "./Reveal";
 
 const projects = [
@@ -29,6 +29,7 @@ const projects = [
 export default function PortfolioSection() {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const [selectedProject, setSelectedProject] = useState<null | (typeof projects)[0]>(null);
 
   return (
     <section id="portfolio" ref={ref} className="relative overflow-hidden px-6 py-24 sm:px-8">
@@ -55,10 +56,47 @@ export default function PortfolioSection() {
 
         <div className="space-y-16">
           {projects.map((p, i) => (
-            <ProjectCard key={p.title} project={p} index={i} inView={inView} />
+            <ProjectCard key={p.title} project={p} index={i} inView={inView} onDemoClick={() => setSelectedProject(p)} />
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {selectedProject && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
+            onClick={() => setSelectedProject(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              className="relative w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="aspect-video">
+                <video
+                  src={`/${selectedProject.video}`}
+                  autoPlay
+                  controls
+                  playsInline
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="absolute top-3 right-3 rounded-full bg-black/50 p-2 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+              >
+                <X size={20} />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
@@ -82,7 +120,7 @@ function TypewriterText({ text, startDelay }: { text: string; startDelay: number
   );
 }
 
-function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]; index: number; inView: boolean }) {
+function ProjectCard({ project, index, inView, onDemoClick }: { project: (typeof projects)[0]; index: number; inView: boolean; onDemoClick: () => void }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
@@ -179,12 +217,12 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
                   animate={cardInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 3.0 + index * 0.15, duration: 0.5 }}
                 >
-                  <a
-                    href="#"
+                  <button
+                    onClick={onDemoClick}
                     className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
                   >
                     Live Demo <ArrowUpRight size={14} />
-                  </a>
+                  </button>
                 </motion.div>
               </div>
             </div>
