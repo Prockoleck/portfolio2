@@ -78,16 +78,16 @@ export default function HeroSection() {
 
           <Reveal direction="left" delay={0.2}>
             <h1 className="text-balance mt-4 text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              Websites That{" "}
-              <span className="gradient-text">Grow Your Business</span>
+              Get a Professional Website{" "}
+              <span className="gradient-text">in 5 Days from ₹4,999</span>
             </h1>
           </Reveal>
 
           <Reveal direction="left" delay={0.35}>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-muted sm:text-lg">
               I build stunning, lightning-fast websites that turn visitors into
-              customers. From business sites to e-commerce — delivered in days,
-              not months.
+              customers. Business sites, e-commerce stores, and landing pages — 
+              delivered in days, not months. 100% satisfaction guaranteed.
             </p>
           </Reveal>
 

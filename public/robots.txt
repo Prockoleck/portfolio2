@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://websitedevelopmentindia.online/sitemap.xml

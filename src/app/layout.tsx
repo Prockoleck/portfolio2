@@ -21,11 +21,11 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Website Development India",
-    default: "Website Development India",
+    template: "%s | Website Development India - ₹4,999 Websites in 5 Days",
+    default: "Website Development India | Professional Websites Starting at ₹4,999",
   },
   description:
-    "Professional web development services in India. Get a stunning, fast, and SEO-optimized website for your business. Starting at ₹4,999.",
+    "Get a stunning, lightning-fast website for your business from ₹4,999. 5-7 day delivery, mobile responsive, SEO-optimized. Web development services across India.",
   metadataBase: new URL("https://websitedevelopmentindia.online"),
   alternates: {
     canonical: "/",
@@ -34,18 +34,18 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
   },
   openGraph: {
-    title: "Website Development India",
+    title: "Website Development India | ₹4,999 Websites in 5 Days",
     description:
-      "Professional web development services in India. Get a stunning, fast, and SEO-optimized website for your business.",
+      "Get a stunning, lightning-fast website for your business from ₹4,999. 5-7 day delivery, mobile responsive, SEO-optimized.",
     type: "website",
     locale: "en_IN",
     siteName: "Website Development India",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development India",
+    title: "Website Development India | ₹4,999 Websites in 5 Days",
     description:
-      "Professional web development services in India. Get a stunning, fast, and SEO-optimized website for your business.",
+      "Get a stunning, lightning-fast website for your business from ₹4,999. 5-7 day delivery, mobile responsive, SEO-optimized.",
   },
 };
 
