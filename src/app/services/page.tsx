@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import ServicesPageClient from "./ServicesPageClient";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Web Development Services | Business Websites & E-commerce from ₹4,999",
   description:
-    "Professional web development services including business websites, e-commerce stores, portfolio sites, landing pages, redesign, and SEO optimization. Starting at ₹4,999.",
+    "Web design and development services in India: business websites, e-commerce stores, portfolio sites, landing pages, redesign, SEO and website maintenance. Starting at ₹4,999, delivered in 5-7 days.",
+  alternates: { canonical: "/services" },
   openGraph: {
-    title: "Web Development Services | Business Websites & E-commerce",
+    title: "Web Design & Development Services | Business Websites & E-commerce",
     description:
-      "Professional web development services including business websites, e-commerce stores, portfolio sites, landing pages, redesign, and SEO optimization.",
+      "Professional website design and development services: business websites, e-commerce stores, portfolio sites, landing pages, redesign and SEO.",
   },
 };
 

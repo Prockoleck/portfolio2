@@ -16,6 +16,12 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} websitedevelopmentindia. All rights reserved.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-muted">
+          <Link href="/website-development" className="transition-colors hover:text-primary">
+            Website Development
+          </Link>
+          <Link href="/website-development-cost" className="transition-colors hover:text-primary">
+            Website Cost in India
+          </Link>
           <Link href="/free-seo-audit" className="transition-colors hover:text-primary">
             Free SEO Audit
           </Link>

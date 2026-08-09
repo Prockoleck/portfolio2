@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog/posts";
+import { cities } from "@/lib/cities";
 
 const BASE = "https://websitedevelopmentindia.online";
 
@@ -13,6 +14,8 @@ const staticRoutes = [
   { path: "/blog", priority: 0.8 },
   { path: "/free-seo-audit", priority: 0.9 },
   { path: "/backlink-kit", priority: 0.6 },
+  { path: "/website-development", priority: 0.9 },
+  { path: "/website-development-cost", priority: 0.8 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -22,6 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority,
+    })),
+    ...cities.map((city) => ({
+      url: `${BASE}/website-development/${city.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     })),
     ...blogPosts.map((post) => ({
       url: `${BASE}/blog/${post.slug}`,
