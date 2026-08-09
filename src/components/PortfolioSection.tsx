@@ -164,11 +164,11 @@ function ProjectCard({ project, index, inView, onDemoClick }: { project: (typeof
             }}
             transition={{ type: "spring", stiffness: 120, damping: 12, mass: 0.15 }}
             style={{ transformStyle: "preserve-3d" }}
-            className={`relative rounded-3xl bg-gradient-to-br from-pink-400 via-purple-400 to-cyan-400 p-[2px] shadow-lg transition-shadow duration-300 ${
-              hovered ? "shadow-xl shadow-black/10" : "shadow-black/5"
+            className={`relative rounded-3xl bg-gradient-to-br from-[#22ff88] via-[#a3e635] to-[#7cffc0] p-[2px] shadow-lg shadow-black/40 transition-shadow duration-300 ${
+              hovered ? "shadow-xl shadow-[#22ff88]/20" : ""
             }`}
           >
-            <div className={`flex flex-col overflow-hidden rounded-[inherit] bg-white ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
+            <div className={`flex flex-col overflow-hidden rounded-[inherit] bg-[#0a0a0a] ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
               {/* Video side */}
               <motion.div
                 className="relative aspect-video w-full shrink-0 overflow-hidden lg:w-1/2"
@@ -219,7 +219,7 @@ function ProjectCard({ project, index, inView, onDemoClick }: { project: (typeof
                 >
                   <button
                     onClick={onDemoClick}
-                    className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-black shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
                   >
                     Live Demo <ArrowUpRight size={14} />
                   </button>

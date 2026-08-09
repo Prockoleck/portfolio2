@@ -8,12 +8,12 @@ import {
 import Reveal from "./Reveal";
 
 const services = [
-  { icon: Globe, title: "Business Websites", desc: "Professional multi-page websites that establish your brand and drive leads 24/7.", color: "from-blue-500 to-blue-600" },
-  { icon: ShoppingCart, title: "E-commerce Stores", desc: "Full-featured online stores with secure payments, inventory, and seamless checkout.", color: "from-emerald-500 to-emerald-600" },
-  { icon: User, title: "Portfolio Websites", desc: "Showcase your work with stunning galleries, case studies, and client testimonials.", color: "from-violet-500 to-violet-600" },
-  { icon: Layout, title: "Landing Pages", desc: "High-converting single-page sites optimized for campaigns, launches, and signups.", color: "from-rose-500 to-rose-600" },
-  { icon: RefreshCw, title: "Website Redesign", desc: "Modernize your existing site with fresh UI, better UX, and improved performance.", color: "from-amber-500 to-amber-600" },
-  { icon: Search, title: "SEO Optimization", desc: "On-page SEO, speed optimization, and structured data to rank higher on Google.", color: "from-cyan-500 to-cyan-600" },
+  { icon: Globe, title: "Business Websites", desc: "Professional multi-page websites that establish your brand and drive leads 24/7.", color: "from-[#22ff88] to-[#12c46a]" },
+  { icon: ShoppingCart, title: "E-commerce Stores", desc: "Full-featured online stores with secure payments, inventory, and seamless checkout.", color: "from-[#7cffc0] to-[#22ff88]" },
+  { icon: User, title: "Portfolio Websites", desc: "Showcase your work with stunning galleries, case studies, and client testimonials.", color: "from-[#a3e635] to-[#65a30d]" },
+  { icon: Layout, title: "Landing Pages", desc: "High-converting single-page sites optimized for campaigns, launches, and signups.", color: "from-[#22ff88] to-[#a3e635]" },
+  { icon: RefreshCw, title: "Website Redesign", desc: "Modernize your existing site with fresh UI, better UX, and improved performance.", color: "from-[#4ade80] to-[#16a34a]" },
+  { icon: Search, title: "SEO Optimization", desc: "On-page SEO, speed optimization, and structured data to rank higher on Google.", color: "from-[#7cffc0] to-[#12c46a]" },
 ];
 
 const containerVariants = {

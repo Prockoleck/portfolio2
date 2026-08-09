@@ -84,7 +84,7 @@ export default function ContactSection() {
 
               <a href="mailto:proshorts71@gmail.com"
                 className="glass-card group flex items-center gap-4 rounded-2xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-white shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-black shadow-lg">
                   <Mail size={22} />
                 </div>
                 <div>
@@ -115,23 +115,23 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit} className="glass-card space-y-5 rounded-2xl p-6 sm:p-8">
               <div className="grid gap-5 sm:grid-cols-2">
                 <input type="text" placeholder="Your Name" required
-                  className="w-full rounded-xl border border-black/[0.06] bg-white px-4 py-3 text-sm outline-none transition-all placeholder:text-muted focus:border-primary/30 focus:ring-2 focus:ring-primary/10" />
+                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted focus:border-primary/40 focus:ring-2 focus:ring-primary/20" />
                 <input type="email" placeholder="Your Email" required
-                  className="w-full rounded-xl border border-black/[0.06] bg-white px-4 py-3 text-sm outline-none transition-all placeholder:text-muted focus:border-primary/30 focus:ring-2 focus:ring-primary/10" />
+                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted focus:border-primary/40 focus:ring-2 focus:ring-primary/20" />
               </div>
               <input type="text" placeholder="Phone Number (optional)"
-                className="w-full rounded-xl border border-black/[0.06] bg-white px-4 py-3 text-sm outline-none transition-all placeholder:text-muted focus:border-primary/30 focus:ring-2 focus:ring-primary/10" />
+                className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted focus:border-primary/40 focus:ring-2 focus:ring-primary/20" />
               <select defaultValue=""
-                className="w-full rounded-xl border border-black/[0.06] bg-white px-4 py-3 text-sm outline-none transition-all text-muted focus:border-primary/30 focus:ring-2 focus:ring-primary/10">
+                className="w-full rounded-xl border border-white/10 bg-[#0a0a0a] px-4 py-3 text-sm outline-none transition-all text-muted focus:border-primary/40 focus:ring-2 focus:ring-primary/20">
                 <option value="" disabled>Select a service</option>
                 <option>Business Website</option><option>E-commerce Store</option>
                 <option>Portfolio Website</option><option>Landing Page</option>
                 <option>Website Redesign</option><option>Other</option>
               </select>
               <textarea rows={4} placeholder="Tell me about your project..." required
-                className="w-full resize-none rounded-xl border border-black/[0.06] bg-white px-4 py-3 text-sm outline-none transition-all placeholder:text-muted focus:border-primary/30 focus:ring-2 focus:ring-primary/10" />
+                className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted focus:border-primary/40 focus:ring-2 focus:ring-primary/20" />
               <motion.button type="submit" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark">
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-black shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark">
                 {sent ? "Message Sent! ✓" : <>Send Message <Send size={14} /></>}
               </motion.button>
             </form>

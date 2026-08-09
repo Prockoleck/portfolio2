@@ -36,7 +36,7 @@ export default function HeroSection() {
       ref={sectionRef}
       className="relative flex min-h-screen items-center overflow-hidden px-6 pt-24 pb-16 sm:px-8"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(37,99,235,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(16,185,129,0.04),transparent_50%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,255,136,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
 
       {/* Parallax background shapes */}
       <motion.div
@@ -52,7 +52,7 @@ export default function HeroSection() {
       <motion.div
         className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full opacity-30 blur-3xl"
         style={{
-          background: "radial-gradient(circle, rgba(37,99,235,0.2), transparent 70%)",
+          background: "radial-gradient(circle, rgba(34,255,136,0.2), transparent 70%)",
           x: useTransform(orbX, [0, 1], [-80, 80]),
           y: useTransform(orbY, [0, 1], [-80, 80]),
         }}
@@ -60,7 +60,7 @@ export default function HeroSection() {
       <motion.div
         className="pointer-events-none absolute -bottom-32 -right-32 h-80 w-80 rounded-full opacity-20 blur-3xl"
         style={{
-          background: "radial-gradient(circle, rgba(16,185,129,0.15), transparent 70%)",
+          background: "radial-gradient(circle, rgba(163,230,53,0.15), transparent 70%)",
           x: useTransform(orbX, [0, 1], [60, -60]),
           y: useTransform(orbY, [0, 1], [60, -60]),
         }}
@@ -95,14 +95,14 @@ export default function HeroSection() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="#pricing"
-                className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30"
+                className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-black shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30"
               >
                 Get a Website
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="#portfolio"
-                className="group inline-flex items-center gap-2 rounded-full border border-black/10 px-7 py-3.5 text-sm font-semibold text-black transition-all hover:border-black/20 hover:bg-black/5"
+                className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/5"
               >
                 <Play size={14} />
                 View Portfolio
@@ -113,15 +113,15 @@ export default function HeroSection() {
           <Reveal direction="left" delay={0.65}>
             <div className="mt-10 flex flex-wrap items-center gap-6 text-xs text-muted">
               <span className="flex items-center gap-1.5">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22ff88" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
                 100% Satisfaction
               </span>
               <span className="flex items-center gap-1.5">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22ff88" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
                 Mobile Responsive
               </span>
               <span className="flex items-center gap-1.5">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22ff88" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
                 5-7 Day Delivery
               </span>
             </div>

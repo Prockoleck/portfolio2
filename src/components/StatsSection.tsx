@@ -8,8 +8,8 @@ import Reveal from "./Reveal";
 const stats = [
   { value: 50, suffix: "+", label: "Projects Delivered", icon: CheckCircle, color: "text-primary" },
   { value: 100, suffix: "%", label: "Client Satisfaction", icon: TrendingUp, color: "text-accent" },
-  { value: 7, suffix: " Days", label: "Avg. Delivery Time", icon: Timer, color: "text-amber-500" },
-  { value: 100, suffix: "%", label: "Mobile Responsive", icon: Smartphone, color: "text-violet-500" },
+  { value: 7, suffix: " Days", label: "Avg. Delivery Time", icon: Timer, color: "text-primary-light" },
+  { value: 100, suffix: "%", label: "Mobile Responsive", icon: Smartphone, color: "text-accent" },
 ];
 
 function Counter({ value, inView }: { value: number; inView: boolean }) {

@@ -91,7 +91,7 @@ export default async function BlogPostPage({ params }: Props) {
               href="https://wa.me/919465568342"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:bg-primary-dark"
+              className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-black shadow-lg transition-all hover:bg-primary-dark"
             >
               Get Started on WhatsApp
             </a>

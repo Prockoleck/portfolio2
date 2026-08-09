@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-black/[0.04] px-6 py-8 sm:px-8">
+    <footer className="border-t border-white/[0.06] px-6 py-8 sm:px-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
         <div className="flex items-center gap-2">
           <img

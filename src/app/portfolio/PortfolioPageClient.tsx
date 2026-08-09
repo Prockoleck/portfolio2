@@ -52,7 +52,7 @@ export default function PortfolioPageClient() {
       <Navbar />
       {/* Hero */}
       <section className="relative flex min-h-[40vh] items-center overflow-hidden px-6 pt-32 pb-16 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(37,99,235,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(16,185,129,0.04),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,255,136,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
         <motion.div className="pointer-events-none absolute top-1/3 -left-16 h-48 w-48 rounded-full border border-primary/5" />
 
         <div className="relative mx-auto max-w-6xl text-center">
@@ -84,8 +84,8 @@ export default function PortfolioPageClient() {
               whileTap={{ scale: 0.96 }}
               className={`rounded-full px-5 py-2 text-sm font-medium transition-all ${
                 activeCategory === cat
-                  ? "bg-primary text-white shadow-lg shadow-primary/25"
-                  : "bg-black/[0.03] text-muted hover:bg-black/[0.06] hover:text-black"
+                  ? "bg-primary text-black shadow-lg shadow-primary/25"
+                  : "bg-white/5 text-muted hover:bg-white/10 hover:text-white"
               }`}
             >
               {cat}
@@ -129,7 +129,7 @@ export default function PortfolioPageClient() {
 
       {/* CTA */}
       <section className="relative overflow-hidden px-6 py-24 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(37,99,235,0.06),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(34,255,136,0.06),transparent_60%)]" />
         <div className="relative mx-auto max-w-3xl text-center">
           <Reveal direction="up">
             <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
@@ -141,7 +141,7 @@ export default function PortfolioPageClient() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-black shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
               >
                 View Pricing <ArrowUpRight size={16} />
               </Link>
@@ -149,7 +149,7 @@ export default function PortfolioPageClient() {
                 href="https://wa.me/919465568342"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-black/10 px-7 py-3.5 text-sm font-semibold text-black transition-all hover:border-black/20 hover:bg-black/5"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/5"
               >
                 Start a Project
               </a>
@@ -173,11 +173,11 @@ export default function PortfolioPageClient() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.85, opacity: 0 }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="relative w-full max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl"
+              className="relative w-full max-w-4xl overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/10 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="p-2 sm:p-3">
-                <div className="aspect-video overflow-hidden rounded-xl border border-black/[0.06] shadow-sm">
+                <div className="aspect-video overflow-hidden rounded-xl border border-white/10 shadow-sm">
                   <video
                     src={`/${selectedProject.video}`}
                     autoPlay
@@ -195,7 +195,7 @@ export default function PortfolioPageClient() {
                 <p className="mt-3 text-sm leading-relaxed text-muted">{selectedProject.longDesc}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {selectedProject.tech.map((t) => (
-                    <span key={t} className="inline-flex items-center gap-1 rounded-full bg-black/[0.04] px-3 py-1 text-xs font-medium text-muted">
+                    <span key={t} className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-muted">
                       <Code size={10} /> {t}
                     </span>
                   ))}
@@ -278,11 +278,11 @@ function ProjectCard({ project, index, inView, onDemoClick }: { project: (typeof
             }}
             transition={{ type: "spring", stiffness: 120, damping: 12, mass: 0.15 }}
             style={{ transformStyle: "preserve-3d" }}
-            className={`relative rounded-3xl bg-gradient-to-br from-pink-400 via-purple-400 to-cyan-400 p-[2px] shadow-lg transition-shadow duration-300 ${
-              hovered ? "shadow-xl shadow-black/10" : "shadow-black/5"
+            className={`relative rounded-3xl bg-gradient-to-br from-[#22ff88] via-[#a3e635] to-[#7cffc0] p-[2px] shadow-lg shadow-black/40 transition-shadow duration-300 ${
+              hovered ? "shadow-xl shadow-[#22ff88]/20" : ""
             }`}
           >
-            <div className={`flex flex-col overflow-hidden rounded-[inherit] bg-white ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
+            <div className={`flex flex-col overflow-hidden rounded-[inherit] bg-[#0a0a0a] ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
               <motion.div
                 className="relative aspect-video w-full shrink-0 overflow-hidden lg:w-1/2"
                 initial={{ x: `${slideFrom * 120}%` }}
@@ -313,7 +313,7 @@ function ProjectCard({ project, index, inView, onDemoClick }: { project: (typeof
                   animate={cardInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 3.0 + index * 0.15, duration: 0.5 }}
                 >
-                  <button onClick={onDemoClick} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl">
+                  <button onClick={onDemoClick} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-black shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl">
                     Live Demo <ExternalLink size={14} />
                   </button>
                 </motion.div>

@@ -74,19 +74,19 @@ export default function AboutPage() {
             <div className="glass-card rounded-2xl p-8">
               <h2 className="text-xl font-semibold text-foreground">Why Work With Me</h2>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-xl bg-white p-5">
+                <div className="rounded-xl border border-white/10 bg-white/5 p-5">
                   <p className="text-2xl font-bold text-primary">5-7 Days</p>
                   <p className="text-sm text-muted">Average delivery time</p>
                 </div>
-                <div className="rounded-xl bg-white p-5">
+                <div className="rounded-xl border border-white/10 bg-white/5 p-5">
                   <p className="text-2xl font-bold text-primary">₹4,999</p>
                   <p className="text-sm text-muted">Starting price</p>
                 </div>
-                <div className="rounded-xl bg-white p-5">
+                <div className="rounded-xl border border-white/10 bg-white/5 p-5">
                   <p className="text-2xl font-bold text-primary">100%</p>
                   <p className="text-sm text-muted">Satisfaction guaranteed</p>
                 </div>
-                <div className="rounded-xl bg-white p-5">
+                <div className="rounded-xl border border-white/10 bg-white/5 p-5">
                   <p className="text-2xl font-bold text-primary">50+</p>
                   <p className="text-sm text-muted">Projects delivered</p>
                 </div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
                 href="https://wa.me/919465568342"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:bg-primary-dark"
+                className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-black shadow-lg transition-all hover:bg-primary-dark"
               >
                 Chat on WhatsApp
               </a>

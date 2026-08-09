@@ -51,9 +51,9 @@ function PricingCard({ plan, index, inView }: { plan: (typeof plans)[0]; index: 
   const directions: ("left" | "right" | "up")[] = ["left", "up", "right"];
 
   const liquidColors = [
-    { body: "linear-gradient(180deg, rgba(234,179,8,0.18) 0%, rgba(234,179,8,0.06) 50%, transparent 100%)", surface: "rgba(234,179,8,0.3)" },
-    { body: "linear-gradient(180deg, rgba(37,99,235,0.22) 0%, rgba(37,99,235,0.08) 50%, transparent 100%)", surface: "rgba(37,99,235,0.35)" },
-    { body: "linear-gradient(180deg, rgba(16,185,129,0.18) 0%, rgba(16,185,129,0.06) 50%, transparent 100%)", surface: "rgba(16,185,129,0.3)" },
+    { body: "linear-gradient(180deg, rgba(34,255,136,0.15) 0%, rgba(34,255,136,0.05) 50%, transparent 100%)", surface: "rgba(34,255,136,0.3)" },
+    { body: "linear-gradient(180deg, rgba(124,255,192,0.18) 0%, rgba(124,255,192,0.06) 50%, transparent 100%)", surface: "rgba(124,255,192,0.35)" },
+    { body: "linear-gradient(180deg, rgba(163,230,53,0.15) 0%, rgba(163,230,53,0.05) 50%, transparent 100%)", surface: "rgba(163,230,53,0.3)" },
   ];
 
   return (
@@ -70,18 +70,18 @@ function PricingCard({ plan, index, inView }: { plan: (typeof plans)[0]; index: 
           onMouseLeave={handleLeave}
           animate={{ x: pos.x, y: pos.y }}
           transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-          className={`relative rounded-2xl bg-gradient-to-br from-pink-400 via-purple-400 to-cyan-400 p-[2px] transition-colors duration-300 ${
-            plan.popular ? "shadow-xl shadow-primary/5 scale-[1.02]" : "shadow-black/5"
+          className={`relative rounded-2xl bg-gradient-to-br from-[#22ff88] via-[#a3e635] to-[#7cffc0] p-[2px] transition-colors duration-300 ${
+            plan.popular ? "shadow-xl shadow-[#22ff88]/15 scale-[1.02]" : "shadow-black/40"
           }`}
         >
           {plan.popular && (
             <div className="absolute -top-3.5 left-1/2 z-20 -translate-x-1/2">
-              <span className="inline-flex items-center gap-1 rounded-full bg-primary px-4 py-1 text-xs font-semibold text-white shadow-lg">
+              <span className="inline-flex items-center gap-1 rounded-full bg-primary px-4 py-1 text-xs font-semibold text-black shadow-lg">
                 <Zap size={12} /> Most Popular
               </span>
             </div>
           )}
-          <div className="relative rounded-[inherit] bg-white">
+          <div className="relative rounded-[inherit] bg-[#0a0a0a]">
             <div className="absolute inset-0 overflow-hidden rounded-[inherit] pointer-events-none">
               <motion.div
                 className="absolute inset-0"
@@ -114,8 +114,8 @@ function PricingCard({ plan, index, inView }: { plan: (typeof plans)[0]; index: 
                 href="https://wa.me/919465568342" target="_blank" rel="noopener noreferrer"
                 className={`group inline-flex w-full items-center justify-center gap-2 rounded-full py-3 text-sm font-semibold transition-all ${
                   plan.popular
-                    ? "bg-primary text-white shadow-lg shadow-primary/25 hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30"
-                    : "border border-black/10 text-black hover:bg-black hover:text-white"
+                    ? "bg-primary text-black shadow-lg shadow-primary/25 hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30"
+                    : "border border-white/15 text-white hover:border-white/30 hover:bg-white hover:text-black"
                 }`}
               >
                 Get Started <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
@@ -143,7 +143,7 @@ export default function PricingPageClient() {
       <Navbar />
       {/* Hero */}
       <section className="relative flex min-h-[40vh] items-center overflow-hidden px-6 pt-32 pb-16 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(37,99,235,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(16,185,129,0.04),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,255,136,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
         <motion.div className="pointer-events-none absolute top-1/4 -left-20 h-48 w-48 rounded-full border border-primary/5" />
 
         <div className="relative mx-auto max-w-6xl text-center">
@@ -234,7 +234,7 @@ export default function PricingPageClient() {
           <Reveal direction="left">
             <div className="glass-card rounded-2xl px-6">
               {faqs.map((faq, i) => (
-                <div key={faq.q} className="border-b border-black/[0.06] last:border-0">
+                <div key={faq.q} className="border-b border-white/[0.08] last:border-0">
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     className="flex w-full items-center justify-between gap-4 py-5 text-left transition-colors hover:text-primary"
@@ -261,7 +261,7 @@ export default function PricingPageClient() {
 
       {/* CTA */}
       <section className="relative overflow-hidden px-6 py-24 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(37,99,235,0.06),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(34,255,136,0.06),transparent_60%)]" />
         <div className="relative mx-auto max-w-3xl text-center">
           <Reveal direction="up">
             <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
@@ -275,13 +275,13 @@ export default function PricingPageClient() {
                 href="https://wa.me/919465568342"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-black shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
               >
                 Chat on WhatsApp <ArrowRight size={16} />
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full border border-black/10 px-7 py-3.5 text-sm font-semibold text-black transition-all hover:border-black/20 hover:bg-black/5"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/5"
               >
                 Send an Email
               </Link>

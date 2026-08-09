@@ -33,7 +33,7 @@ function NavLink({ label, href, onClick, mobile }: { label: string; href: string
       />
       <motion.span
         className="relative z-10"
-        animate={{ color: hovered ? "#fff" : undefined }}
+        animate={{ color: hovered ? "#052e16" : undefined }}
         transition={{ duration: 0.2 }}
       >
         {label}
@@ -50,7 +50,7 @@ export default function Navbar() {
       initial={{ y: -80 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed top-0 right-0 left-0 z-50 bg-white/80 backdrop-blur-xl border-b border-black/[0.04]"
+      className="fixed top-0 right-0 left-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/[0.06]"
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
@@ -75,7 +75,7 @@ export default function Navbar() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.7 }}
-            className="ml-4 rounded-full bg-primary px-5 py-2 text-sm font-medium text-white transition-all hover:bg-primary-dark"
+            className="ml-4 rounded-full bg-primary px-5 py-2 text-sm font-medium text-black transition-all hover:bg-primary-dark"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
           >
@@ -106,7 +106,7 @@ export default function Navbar() {
               href="https://wa.me/919465568342"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 rounded-full bg-primary px-5 py-2.5 text-center text-sm font-medium text-white"
+              className="mt-2 rounded-full bg-primary px-5 py-2.5 text-center text-sm font-medium text-black"
             >
               WhatsApp Me
             </a>

@@ -24,7 +24,7 @@ function FAQItem({ faq, index, inView }: { faq: (typeof faqs)[0]; index: number;
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: index * 0.05, duration: 0.4 }}
-      className="border-b border-black/[0.06] last:border-0"
+      className="border-b border-white/[0.08] last:border-0"
     >
       <button
         onClick={() => setOpen(!open)}

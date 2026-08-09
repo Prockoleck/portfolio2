@@ -6,10 +6,10 @@ import { MessageSquare, Palette, Code, Rocket } from "lucide-react";
 import Reveal from "./Reveal";
 
 const steps = [
-  { icon: MessageSquare, title: "Discussion", desc: "We talk about your vision, goals, and requirements. I answer all your questions and propose the best solution.", color: "from-blue-500 to-blue-600" },
-  { icon: Palette, title: "Design", desc: "I create a custom design tailored to your brand. You get to review and request changes until it's perfect.", color: "from-violet-500 to-violet-600" },
-  { icon: Code, title: "Development", desc: "I build your website with clean, optimized code. You get regular updates on the progress throughout.", color: "from-emerald-500 to-emerald-600" },
-  { icon: Rocket, title: "Launch", desc: "I deploy your site, configure everything, and hand it over with full documentation and training.", color: "from-rose-500 to-rose-600" },
+  { icon: MessageSquare, title: "Discussion", desc: "We talk about your vision, goals, and requirements. I answer all your questions and propose the best solution.", color: "from-[#22ff88] to-[#12c46a]" },
+  { icon: Palette, title: "Design", desc: "I create a custom design tailored to your brand. You get to review and request changes until it's perfect.", color: "from-[#7cffc0] to-[#22ff88]" },
+  { icon: Code, title: "Development", desc: "I build your website with clean, optimized code. You get regular updates on the progress throughout.", color: "from-[#a3e635] to-[#65a30d]" },
+  { icon: Rocket, title: "Launch", desc: "I deploy your site, configure everything, and hand it over with full documentation and training.", color: "from-[#4ade80] to-[#16a34a]" },
 ];
 
 export default function ProcessSection() {
@@ -51,7 +51,7 @@ export default function ProcessSection() {
                 transition={{ delay: i * 0.12, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="glass-card group relative rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="mb-4 text-5xl font-bold text-black/[0.03]">0{i + 1}</div>
+                <div className="mb-4 text-5xl font-bold text-white/[0.05]">0{i + 1}</div>
                 <div className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${s.color} text-white shadow-lg`}>
                   <s.icon size={20} />
                 </div>

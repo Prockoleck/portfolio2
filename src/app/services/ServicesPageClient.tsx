@@ -17,42 +17,42 @@ const services = [
     title: "Business Websites",
     desc: "Professional multi-page websites that establish your brand identity and drive leads 24/7. Perfect for startups, small businesses, and established companies looking to build a strong online presence.",
     features: ["Custom design tailored to your brand", "Up to 10 pages", "Contact form & lead capture", "Google Maps integration", "Social media integration", "Fast loading speed"],
-    color: "from-blue-500 to-blue-600",
+    color: "from-[#22ff88] to-[#12c46a]",
   },
   {
     icon: ShoppingCart,
     title: "E-commerce Stores",
     desc: "Full-featured online stores with secure payment processing, inventory management, and a seamless checkout experience that converts visitors into customers.",
     features: ["Product catalog with categories", "Secure payment gateway", "Shopping cart & checkout", "Order management system", "Customer accounts", "Mobile-optimized shopping"],
-    color: "from-emerald-500 to-emerald-600",
+    color: "from-[#7cffc0] to-[#22ff88]",
   },
   {
     icon: User,
     title: "Portfolio Websites",
     desc: "Showcase your work with stunning galleries, detailed case studies, and client testimonials. Ideal for photographers, designers, agencies, and creative professionals.",
     features: ["Visual project gallery", "Case study sections", "Client testimonials", "Contact inquiry form", "Blog integration", "Social proof elements"],
-    color: "from-violet-500 to-violet-600",
+    color: "from-[#a3e635] to-[#65a30d]",
   },
   {
     icon: Layout,
     title: "Landing Pages",
     desc: "High-converting single-page websites optimized for marketing campaigns, product launches, event signups, and lead generation with clear call-to-action.",
     features: ["Conversion-optimized design", "A/B testing ready", "Analytics integration", "Fast load under 2 seconds", "Lead capture forms", "Social proof & trust badges"],
-    color: "from-rose-500 to-rose-600",
+    color: "from-[#22ff88] to-[#a3e635]",
   },
   {
     icon: RefreshCw,
     title: "Website Redesign",
     desc: "Modernize your existing website with a fresh user interface, better user experience, improved performance, and the latest design trends.",
     features: ["UI/UX audit", "Modern design overhaul", "Performance optimization", "Mobile responsiveness", "SEO improvement", "Content restructuring"],
-    color: "from-amber-500 to-amber-600",
+    color: "from-[#4ade80] to-[#16a34a]",
   },
   {
     icon: Search,
     title: "SEO Optimization",
     desc: "On-page and technical SEO services to help your website rank higher on Google, drive organic traffic, and reach more customers.",
     features: ["Keyword research & strategy", "Meta tags & structured data", "Speed optimization", "Mobile optimization", "XML sitemap setup", "Google Analytics & Search Console"],
-    color: "from-cyan-500 to-cyan-600",
+    color: "from-[#7cffc0] to-[#12c46a]",
   },
 ];
 
@@ -134,7 +134,7 @@ export default function ServicesPageClient() {
       <Navbar />
       {/* Hero */}
       <section className="relative flex min-h-[50vh] items-center overflow-hidden px-6 pt-32 pb-16 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(37,99,235,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(16,185,129,0.04),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,255,136,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
         <motion.div className="pointer-events-none absolute top-1/4 -left-20 h-64 w-64 rounded-full border border-primary/5" />
         <motion.div className="pointer-events-none absolute bottom-1/4 -right-16 h-48 w-48 rounded-full bg-accent/[0.02]" />
 
@@ -236,7 +236,7 @@ export default function ServicesPageClient() {
 
       {/* CTA */}
       <section className="relative overflow-hidden px-6 py-24 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(37,99,235,0.06),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(34,255,136,0.06),transparent_60%)]" />
         <div className="relative mx-auto max-w-3xl text-center">
           <Reveal direction="up">
             <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
@@ -248,7 +248,7 @@ export default function ServicesPageClient() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-black shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
               >
                 Get a Free Quote <ArrowRight size={16} />
               </Link>
@@ -256,7 +256,7 @@ export default function ServicesPageClient() {
                 href="https://wa.me/919465568342"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-black/10 px-7 py-3.5 text-sm font-semibold text-black transition-all hover:border-black/20 hover:bg-black/5"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/5"
               >
                 Chat on WhatsApp
               </a>

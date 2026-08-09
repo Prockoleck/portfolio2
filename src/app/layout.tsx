@@ -59,7 +59,7 @@ export default function RootLayout({
       lang="en-IN"
       className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable}`}
     >
-      <body className="bg-white text-foreground antialiased selection:bg-primary selection:text-white">
+      <body className="bg-background text-foreground antialiased selection:bg-primary selection:text-black">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

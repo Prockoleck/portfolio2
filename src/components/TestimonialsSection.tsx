@@ -52,7 +52,7 @@ export default function TestimonialsSection() {
               >
                 <Quote size={24} className="mb-4 text-primary/30" />
                 <p className="mb-6 text-sm leading-relaxed text-muted">&ldquo;{t.quote}&rdquo;</p>
-                <div className="border-t border-black/[0.04] pt-4">
+                <div className="border-t border-white/[0.06] pt-4">
                   <p className="text-sm font-semibold">{t.author}</p>
                   <p className="text-xs text-muted">{t.role}</p>
                 </div>

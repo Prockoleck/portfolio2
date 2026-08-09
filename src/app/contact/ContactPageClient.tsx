@@ -44,7 +44,7 @@ export default function ContactPageClient() {
       <Navbar />
       {/* Hero */}
       <section className="relative flex min-h-[40vh] items-center overflow-hidden px-6 pt-32 pb-16 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(37,99,235,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(16,185,129,0.04),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,255,136,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
         <motion.div className="pointer-events-none absolute top-1/4 -left-20 h-48 w-48 rounded-full border border-primary/5" />
         <motion.div className="pointer-events-none absolute bottom-1/4 -right-16 h-36 w-36 rounded-full bg-accent/[0.02]" />
 
@@ -102,7 +102,7 @@ export default function ContactPageClient() {
 
                 <a href="mailto:proshorts71@gmail.com"
                   className="glass-card group flex items-center gap-4 rounded-2xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-white shadow-lg">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-black shadow-lg">
                     <Mail size={22} />
                   </div>
                   <div>
@@ -133,25 +133,25 @@ export default function ContactPageClient() {
               <form onSubmit={handleSubmit} className="glass-card space-y-5 rounded-2xl p-6 sm:p-8">
                 <div className="grid gap-5 sm:grid-cols-2">
                   <input type="text" placeholder="Your Name" required
-                    className="w-full rounded-xl border border-black/[0.06] bg-white px-4 py-3 text-sm outline-none transition-all placeholder:text-muted focus:border-primary/30 focus:ring-2 focus:ring-primary/10" />
+                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted focus:border-primary/40 focus:ring-2 focus:ring-primary/20" />
                   <input type="email" placeholder="Your Email" required
-                    className="w-full rounded-xl border border-black/[0.06] bg-white px-4 py-3 text-sm outline-none transition-all placeholder:text-muted focus:border-primary/30 focus:ring-2 focus:ring-primary/10" />
+                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted focus:border-primary/40 focus:ring-2 focus:ring-primary/20" />
                 </div>
                 <input type="text" placeholder="Phone Number (optional)"
-                  className="w-full rounded-xl border border-black/[0.06] bg-white px-4 py-3 text-sm outline-none transition-all placeholder:text-muted focus:border-primary/30 focus:ring-2 focus:ring-primary/10" />
+                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted focus:border-primary/40 focus:ring-2 focus:ring-primary/20" />
                 <select defaultValue=""
-                  className="w-full rounded-xl border border-black/[0.06] bg-white px-4 py-3 text-sm outline-none transition-all text-muted focus:border-primary/30 focus:ring-2 focus:ring-primary/10">
+                  className="w-full rounded-xl border border-white/10 bg-[#0a0a0a] px-4 py-3 text-sm outline-none transition-all text-muted focus:border-primary/40 focus:ring-2 focus:ring-primary/20">
                   <option value="" disabled>Select a service</option>
                   <option>Business Website</option><option>E-commerce Store</option>
                   <option>Portfolio Website</option><option>Landing Page</option>
                   <option>Website Redesign</option><option>Other</option>
                 </select>
                 <input type="text" placeholder="Budget (optional)"
-                  className="w-full rounded-xl border border-black/[0.06] bg-white px-4 py-3 text-sm outline-none transition-all placeholder:text-muted focus:border-primary/30 focus:ring-2 focus:ring-primary/10" />
+                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted focus:border-primary/40 focus:ring-2 focus:ring-primary/20" />
                 <textarea rows={4} placeholder="Tell me about your project... What kind of website do you need? What features are important to you?" required
-                  className="w-full resize-none rounded-xl border border-black/[0.06] bg-white px-4 py-3 text-sm outline-none transition-all placeholder:text-muted focus:border-primary/30 focus:ring-2 focus:ring-primary/10" />
+                  className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted focus:border-primary/40 focus:ring-2 focus:ring-primary/20" />
                 <motion.button type="submit" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark">
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-black shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark">
                   {sent ? "Message Sent! ✓" : <>Send Message <Send size={14} /></>}
                 </motion.button>
                 <p className="text-center text-xs text-muted">
@@ -185,7 +185,7 @@ export default function ContactPageClient() {
               <Reveal key={t.author} direction={["left", "up", "right"][i] as "left" | "up" | "right"} delay={i * 0.1}>
                 <div className="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                   <p className="mb-6 text-sm leading-relaxed text-muted">&ldquo;{t.quote}&rdquo;</p>
-                  <div className="border-t border-black/[0.04] pt-4">
+                  <div className="border-t border-white/[0.06] pt-4">
                     <p className="text-sm font-semibold">{t.author}</p>
                     <p className="text-xs text-muted">{t.role}</p>
                   </div>
@@ -198,7 +198,7 @@ export default function ContactPageClient() {
 
       {/* CTA */}
       <section className="relative overflow-hidden px-6 py-24 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(37,99,235,0.06),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(34,255,136,0.06),transparent_60%)]" />
 
         <div className="relative mx-auto max-w-3xl text-center">
           <Reveal direction="up">
@@ -213,13 +213,13 @@ export default function ContactPageClient() {
                 href="https://wa.me/919465568342"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-black shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl"
               >
                 WhatsApp Now <ArrowRight size={16} />
               </a>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-full border border-black/10 px-7 py-3.5 text-sm font-semibold text-black transition-all hover:border-black/20 hover:bg-black/5"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/5"
               >
                 View Services
               </Link>
