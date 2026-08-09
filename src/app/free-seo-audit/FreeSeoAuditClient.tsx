@@ -6,7 +6,6 @@ import {
   AlertTriangle,
   ArrowRight,
   Check,
-  Copy,
   Globe,
   Loader2,
   Search,
