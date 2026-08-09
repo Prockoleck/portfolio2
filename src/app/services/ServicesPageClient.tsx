@@ -17,14 +17,14 @@ const services = [
     title: "Business Websites",
     desc: "Professional multi-page websites that establish your brand identity and drive leads 24/7. Perfect for startups, small businesses, and established companies looking to build a strong online presence.",
     features: ["Custom design tailored to your brand", "Up to 10 pages", "Contact form & lead capture", "Google Maps integration", "Social media integration", "Fast loading speed"],
-    color: "from-[#22ff88] to-[#12c46a]",
+    color: "from-[#39ff14] to-[#12c46a]",
   },
   {
     icon: ShoppingCart,
     title: "E-commerce Stores",
     desc: "Full-featured online stores with secure payment processing, inventory management, and a seamless checkout experience that converts visitors into customers.",
     features: ["Product catalog with categories", "Secure payment gateway", "Shopping cart & checkout", "Order management system", "Customer accounts", "Mobile-optimized shopping"],
-    color: "from-[#7cffc0] to-[#22ff88]",
+    color: "from-[#7cffc0] to-[#39ff14]",
   },
   {
     icon: User,
@@ -38,7 +38,7 @@ const services = [
     title: "Landing Pages",
     desc: "High-converting single-page websites optimized for marketing campaigns, product launches, event signups, and lead generation with clear call-to-action.",
     features: ["Conversion-optimized design", "A/B testing ready", "Analytics integration", "Fast load under 2 seconds", "Lead capture forms", "Social proof & trust badges"],
-    color: "from-[#22ff88] to-[#a3e635]",
+    color: "from-[#39ff14] to-[#a3e635]",
   },
   {
     icon: RefreshCw,
@@ -134,7 +134,7 @@ export default function ServicesPageClient() {
       <Navbar />
       {/* Hero */}
       <section className="relative flex min-h-[50vh] items-center overflow-hidden px-6 pt-32 pb-16 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,255,136,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(57,255,20,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
         <motion.div className="pointer-events-none absolute top-1/4 -left-20 h-64 w-64 rounded-full border border-primary/5" />
         <motion.div className="pointer-events-none absolute bottom-1/4 -right-16 h-48 w-48 rounded-full bg-accent/[0.02]" />
 
@@ -236,7 +236,7 @@ export default function ServicesPageClient() {
 
       {/* CTA */}
       <section className="relative overflow-hidden px-6 py-24 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(34,255,136,0.06),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(57,255,20,0.06),transparent_60%)]" />
         <div className="relative mx-auto max-w-3xl text-center">
           <Reveal direction="up">
             <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">

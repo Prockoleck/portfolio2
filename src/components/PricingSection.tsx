@@ -30,7 +30,7 @@ function PricingCard({ plan, index, inView }: { plan: (typeof plans)[0]; index: 
   const directions: ("left" | "right" | "up")[] = ["left", "up", "right"];
 
   const liquidColors = [
-    { body: "linear-gradient(180deg, rgba(34,255,136,0.15) 0%, rgba(34,255,136,0.05) 50%, transparent 100%)", surface: "rgba(34,255,136,0.3)" },
+    { body: "linear-gradient(180deg, rgba(57,255,20,0.15) 0%, rgba(57,255,20,0.05) 50%, transparent 100%)", surface: "rgba(57,255,20,0.3)" },
     { body: "linear-gradient(180deg, rgba(124,255,192,0.18) 0%, rgba(124,255,192,0.06) 50%, transparent 100%)", surface: "rgba(124,255,192,0.35)" },
     { body: "linear-gradient(180deg, rgba(163,230,53,0.15) 0%, rgba(163,230,53,0.05) 50%, transparent 100%)", surface: "rgba(163,230,53,0.3)" },
   ];
@@ -49,9 +49,9 @@ function PricingCard({ plan, index, inView }: { plan: (typeof plans)[0]; index: 
           onMouseLeave={handleLeave}
           animate={{ x: pos.x, y: pos.y }}
           transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-          className={`relative rounded-2xl bg-gradient-to-br from-[#22ff88] via-[#a3e635] to-[#7cffc0] p-[2px] transition-colors duration-300 ${
+          className={`relative rounded-2xl bg-gradient-to-br from-[#39ff14] via-[#a3e635] to-[#7cffc0] p-[2px] transition-colors duration-300 ${
             plan.popular
-              ? "shadow-xl shadow-[#22ff88]/15 scale-[1.02]"
+              ? "shadow-xl shadow-[#39ff14]/15 scale-[1.02]"
               : "shadow-black/40"
           }`}
         >

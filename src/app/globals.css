@@ -4,7 +4,7 @@
   --color-background: #050505;
   --color-foreground: #fafafa;
   --color-muted: #9ca3af;
-  --color-primary: #22ff88;
+  --color-primary: #39ff14;
   --color-primary-dark: #12c46a;
   --color-primary-light: #7cffc0;
   --color-accent: #a3e635;
@@ -21,7 +21,7 @@
 }
 
 ::selection {
-  background: #22ff88;
+  background: #39ff14;
   color: #050505;
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #22ff88, #a3e635);
+  background: linear-gradient(135deg, #39ff14, #a3e635);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -164,8 +164,8 @@ function ProjectCard({ project, index, inView, onDemoClick }: { project: (typeof
             }}
             transition={{ type: "spring", stiffness: 120, damping: 12, mass: 0.15 }}
             style={{ transformStyle: "preserve-3d" }}
-            className={`relative rounded-3xl bg-gradient-to-br from-[#22ff88] via-[#a3e635] to-[#7cffc0] p-[2px] shadow-lg shadow-black/40 transition-shadow duration-300 ${
-              hovered ? "shadow-xl shadow-[#22ff88]/20" : ""
+            className={`relative rounded-3xl bg-gradient-to-br from-[#39ff14] via-[#a3e635] to-[#7cffc0] p-[2px] shadow-lg shadow-black/40 transition-shadow duration-300 ${
+              hovered ? "shadow-xl shadow-[#39ff14]/20" : ""
             }`}
           >
             <div className={`flex flex-col overflow-hidden rounded-[inherit] bg-[#0a0a0a] ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}>

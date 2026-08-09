@@ -44,7 +44,7 @@ export default function ContactPageClient() {
       <Navbar />
       {/* Hero */}
       <section className="relative flex min-h-[40vh] items-center overflow-hidden px-6 pt-32 pb-16 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,255,136,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(57,255,20,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
         <motion.div className="pointer-events-none absolute top-1/4 -left-20 h-48 w-48 rounded-full border border-primary/5" />
         <motion.div className="pointer-events-none absolute bottom-1/4 -right-16 h-36 w-36 rounded-full bg-accent/[0.02]" />
 
@@ -198,7 +198,7 @@ export default function ContactPageClient() {
 
       {/* CTA */}
       <section className="relative overflow-hidden px-6 py-24 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(34,255,136,0.06),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(57,255,20,0.06),transparent_60%)]" />
 
         <div className="relative mx-auto max-w-3xl text-center">
           <Reveal direction="up">

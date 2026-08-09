@@ -52,7 +52,7 @@ export default function PortfolioPageClient() {
       <Navbar />
       {/* Hero */}
       <section className="relative flex min-h-[40vh] items-center overflow-hidden px-6 pt-32 pb-16 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,255,136,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(57,255,20,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
         <motion.div className="pointer-events-none absolute top-1/3 -left-16 h-48 w-48 rounded-full border border-primary/5" />
 
         <div className="relative mx-auto max-w-6xl text-center">
@@ -129,7 +129,7 @@ export default function PortfolioPageClient() {
 
       {/* CTA */}
       <section className="relative overflow-hidden px-6 py-24 sm:px-8">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(34,255,136,0.06),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(57,255,20,0.06),transparent_60%)]" />
         <div className="relative mx-auto max-w-3xl text-center">
           <Reveal direction="up">
             <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
@@ -278,8 +278,8 @@ function ProjectCard({ project, index, inView, onDemoClick }: { project: (typeof
             }}
             transition={{ type: "spring", stiffness: 120, damping: 12, mass: 0.15 }}
             style={{ transformStyle: "preserve-3d" }}
-            className={`relative rounded-3xl bg-gradient-to-br from-[#22ff88] via-[#a3e635] to-[#7cffc0] p-[2px] shadow-lg shadow-black/40 transition-shadow duration-300 ${
-              hovered ? "shadow-xl shadow-[#22ff88]/20" : ""
+            className={`relative rounded-3xl bg-gradient-to-br from-[#39ff14] via-[#a3e635] to-[#7cffc0] p-[2px] shadow-lg shadow-black/40 transition-shadow duration-300 ${
+              hovered ? "shadow-xl shadow-[#39ff14]/20" : ""
             }`}
           >
             <div className={`flex flex-col overflow-hidden rounded-[inherit] bg-[#0a0a0a] ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}>

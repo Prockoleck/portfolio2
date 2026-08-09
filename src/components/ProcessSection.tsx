@@ -6,8 +6,8 @@ import { MessageSquare, Palette, Code, Rocket } from "lucide-react";
 import Reveal from "./Reveal";
 
 const steps = [
-  { icon: MessageSquare, title: "Discussion", desc: "We talk about your vision, goals, and requirements. I answer all your questions and propose the best solution.", color: "from-[#22ff88] to-[#12c46a]" },
-  { icon: Palette, title: "Design", desc: "I create a custom design tailored to your brand. You get to review and request changes until it's perfect.", color: "from-[#7cffc0] to-[#22ff88]" },
+  { icon: MessageSquare, title: "Discussion", desc: "We talk about your vision, goals, and requirements. I answer all your questions and propose the best solution.", color: "from-[#39ff14] to-[#12c46a]" },
+  { icon: Palette, title: "Design", desc: "I create a custom design tailored to your brand. You get to review and request changes until it's perfect.", color: "from-[#7cffc0] to-[#39ff14]" },
   { icon: Code, title: "Development", desc: "I build your website with clean, optimized code. You get regular updates on the progress throughout.", color: "from-[#a3e635] to-[#65a30d]" },
   { icon: Rocket, title: "Launch", desc: "I deploy your site, configure everything, and hand it over with full documentation and training.", color: "from-[#4ade80] to-[#16a34a]" },
 ];

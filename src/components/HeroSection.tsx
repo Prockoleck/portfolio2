@@ -36,7 +36,7 @@ export default function HeroSection() {
       ref={sectionRef}
       className="relative flex min-h-screen items-center overflow-hidden px-6 pt-24 pb-16 sm:px-8"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,255,136,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(57,255,20,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
 
       {/* Parallax background shapes */}
       <motion.div
@@ -52,7 +52,7 @@ export default function HeroSection() {
       <motion.div
         className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full opacity-30 blur-3xl"
         style={{
-          background: "radial-gradient(circle, rgba(34,255,136,0.2), transparent 70%)",
+          background: "radial-gradient(circle, rgba(57,255,20,0.2), transparent 70%)",
           x: useTransform(orbX, [0, 1], [-80, 80]),
           y: useTransform(orbY, [0, 1], [-80, 80]),
         }}
@@ -113,15 +113,15 @@ export default function HeroSection() {
           <Reveal direction="left" delay={0.65}>
             <div className="mt-10 flex flex-wrap items-center gap-6 text-xs text-muted">
               <span className="flex items-center gap-1.5">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22ff88" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#39ff14" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
                 100% Satisfaction
               </span>
               <span className="flex items-center gap-1.5">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22ff88" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#39ff14" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
                 Mobile Responsive
               </span>
               <span className="flex items-center gap-1.5">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22ff88" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#39ff14" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
                 5-7 Day Delivery
               </span>
             </div>
