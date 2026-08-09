@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, Sparkles, X } from "lucide-react";
 import Link from "next/link";
 
 const links = [
@@ -12,6 +12,12 @@ const links = [
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+];
+
+const tickerItems = [
+  "Flat 25% Off This Month",
+  "Websites From ₹3,749",
+  "Offer Valid This Month Only",
 ];
 
 function NavLink({ label, href, onClick, mobile }: { label: string; href: string; onClick?: () => void; mobile?: boolean }) {
@@ -91,6 +97,37 @@ export default function Navbar() {
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>
+
+      <div className="relative flex items-center overflow-hidden border-t border-white/[0.06] bg-[#0a0a0a]">
+        <div className="marquee-track py-2.5">
+          {[0, 1].map((dup) => (
+            <div key={dup} aria-hidden={dup === 1} className="flex shrink-0 items-center">
+              {tickerItems.map((item, i) => (
+                <span
+                  key={`${dup}-${i}`}
+                  className="mx-4 flex items-center gap-8 whitespace-nowrap text-xs font-semibold uppercase tracking-[0.15em] text-primary"
+                >
+                  <Sparkles size={12} aria-hidden />
+                  {item}
+                  <span aria-hidden className="text-primary/30">
+                    ✦
+                  </span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+        <div className="absolute top-0 right-0 bottom-0 z-10 flex items-center bg-gradient-to-l from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent pl-16">
+          <a
+            href="https://wa.me/919465568342?text=Hi!%20I%27d%20like%20to%20claim%20the%2025%25%20off%20offer"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mr-3 inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-bold text-black transition-colors hover:bg-primary-dark"
+          >
+            Claim 25% Off <ArrowRight size={13} />
+          </a>
+        </div>
+      </div>
 
       {open && (
         <motion.div

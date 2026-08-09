@@ -34,7 +34,7 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       <Navbar />
-      <main className="pt-28 pb-20 px-6 sm:px-8">
+      <main className="pt-36 pb-20 px-6 sm:px-8">
         <article className="mx-auto max-w-3xl">
           <Link
             href="/blog"

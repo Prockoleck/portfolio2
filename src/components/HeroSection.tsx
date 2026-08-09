@@ -35,7 +35,7 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex min-h-screen items-center overflow-hidden px-6 pt-24 pb-16 sm:px-8"
+      className="relative flex min-h-screen items-center overflow-hidden px-6 pt-36 pb-16 sm:px-8"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(57,255,20,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
       <div className="bg-grid pointer-events-none absolute inset-0" />

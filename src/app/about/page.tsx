@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-28 pb-20 px-6 sm:px-8">
+      <main className="pt-36 pb-20 px-6 sm:px-8">
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
             <span className="mb-4 inline-block rounded-full bg-primary/5 px-4 py-1.5 text-xs font-semibold text-primary">
