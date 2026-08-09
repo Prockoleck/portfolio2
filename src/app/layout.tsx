@@ -3,6 +3,9 @@ import { Geist, Geist_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
+import AuroraBackground from "@/components/AuroraBackground";
+import CursorGlow from "@/components/CursorGlow";
+import GrainOverlay from "@/components/GrainOverlay";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,10 +84,13 @@ export default function RootLayout({
             }).replace(/</g, "\\u003c"),
           }}
         />
+        <AuroraBackground />
         <Providers>
-  {children}
-  <WhatsAppCTA />
-</Providers>
+          <CursorGlow />
+          {children}
+          <WhatsAppCTA />
+        </Providers>
+        <GrainOverlay />
       </body>
     </html>
   );

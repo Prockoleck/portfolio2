@@ -42,7 +42,8 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
 }
 
 .text-balance {
@@ -57,6 +58,15 @@ body {
 }
 
 .premium-shadow {
-  box-shadow: 0 20px 60px rgba(34, 255, 136, 0.15),
-              0 8px 24px rgba(34, 255, 136, 0.1);
+  box-shadow: 0 20px 60px rgba(57, 255, 20, 0.15),
+              0 8px 24px rgba(57, 255, 20, 0.1);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 35%, black 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 35%, black 30%, transparent 100%);
 }

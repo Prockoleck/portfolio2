@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import Reveal from "./Reveal";
+import Magnetic from "./Magnetic";
 
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -37,6 +38,7 @@ export default function HeroSection() {
       className="relative flex min-h-screen items-center overflow-hidden px-6 pt-24 pb-16 sm:px-8"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(57,255,20,0.06),transparent_50%),radial-gradient(ellipse_at_bottom_left,_rgba(163,230,53,0.04),transparent_50%)]" />
+      <div className="bg-grid pointer-events-none absolute inset-0" />
 
       {/* Parallax background shapes */}
       <motion.div
@@ -93,20 +95,24 @@ export default function HeroSection() {
 
           <Reveal direction="left" delay={0.5}>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href="#pricing"
-                className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-black shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30"
-              >
-                Get a Website
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-              </a>
-              <a
-                href="#portfolio"
-                className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/5"
-              >
-                <Play size={14} />
-                View Portfolio
-              </a>
+              <Magnetic>
+                <a
+                  href="#pricing"
+                  className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-black shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30"
+                >
+                  Get a Website
+                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                </a>
+              </Magnetic>
+              <Magnetic>
+                <a
+                  href="#portfolio"
+                  className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/5"
+                >
+                  <Play size={14} />
+                  View Portfolio
+                </a>
+              </Magnetic>
             </div>
           </Reveal>
 

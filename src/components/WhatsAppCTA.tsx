@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Magnetic from "./Magnetic";
 
 export default function WhatsAppCTA() {
   return (
+    <Magnetic strength={0.5} className="fixed bottom-6 right-6 z-50">
     <motion.a
       href="https://wa.me/919465568342"
       target="_blank"
@@ -14,7 +16,7 @@ export default function WhatsAppCTA() {
       transition={{ delay: 1.5, type: "spring", stiffness: 200, damping: 15 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-colors hover:bg-[#20bd5a]"
+      className="flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-colors hover:bg-[#20bd5a]"
     >
       <motion.span
         animate={{ rotate: [0, -10, 10, -10, 0] }}
@@ -31,5 +33,6 @@ export default function WhatsAppCTA() {
         style={{ zIndex: -1 }}
       />
     </motion.a>
+    </Magnetic>
   );
 }
