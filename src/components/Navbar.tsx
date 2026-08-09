@@ -12,6 +12,7 @@ const links = [
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "Free Audit", href: "/free-seo-audit" },
 ];
 
 const tickerItems = [
