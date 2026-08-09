@@ -23,6 +23,17 @@ const addons = [
   { name: "Social Media Integration", price: "₹999" },
 ];
 
+const comparison = [
+  { feature: "Starting Price", me: "₹4,999", agency: "₹25,000+" },
+  { feature: "Delivery Time", me: "5-7 days", agency: "4-8 weeks" },
+  { feature: "Design Revisions", me: "Unlimited", agency: "Limited, extra charges" },
+  { feature: "Mobile Responsive", me: "Included", agency: "Extra ₹5,000+" },
+  { feature: "SEO Optimization", me: "Included", agency: "Extra ₹10,000+" },
+  { feature: "Post-Launch Support", me: "30 days free", agency: "Not included" },
+  { feature: "WhatsApp Integration", me: "Included", agency: "Add-on cost" },
+  { feature: "Who You Talk To", me: "Direct with the developer", agency: "Account manager" },
+];
+
 const faqs = [
   { q: "What is the payment structure?", a: "I require 50% advance payment to start the project. The remaining 50% is due after completion and before the final deliverable is handed over." },
   { q: "How long does delivery take?", a: "Most websites are delivered within 5-7 days. Complex projects with extensive features may take 7-10 days." },
@@ -214,6 +225,46 @@ export default function PricingPageClient() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Comparison */}
+      <section className="relative overflow-hidden px-6 py-24 sm:px-8">
+        <motion.div className="pointer-events-none absolute top-1/4 -left-10 h-28 w-28 rounded-full border border-primary/5"
+          animate={{ y: [0, -20, 0] }} transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }} />
+
+        <div className="relative mx-auto max-w-4xl">
+          <Reveal direction="up">
+            <div className="mb-12 text-center">
+              <span className="mb-4 inline-block rounded-full bg-primary/5 px-4 py-1.5 text-xs font-semibold text-primary">Why Choose Me</span>
+              <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+                Me vs <span className="gradient-text">Typical Agency</span>
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-muted">
+                You get the same quality for a fraction of the price — because there&apos;s no middleman.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal direction="up" delay={0.1}>
+            <div className="glass-card overflow-hidden rounded-2xl">
+              <div className="grid grid-cols-[1.1fr_1fr_1fr] border-b border-white/[0.08] bg-white/[0.02] px-5 py-4 text-xs font-semibold uppercase tracking-widest text-muted sm:px-8">
+                <span>Feature</span>
+                <span className="text-primary">With Me</span>
+                <span className="text-right">Typical Agency</span>
+              </div>
+              {comparison.map((row, i) => (
+                <div
+                  key={row.feature}
+                  className={`grid grid-cols-[1.1fr_1fr_1fr] px-5 py-4 text-sm sm:px-8 ${i % 2 === 1 ? "bg-white/[0.02]" : ""}`}
+                >
+                  <span className="font-medium text-foreground/80">{row.feature}</span>
+                  <span className="font-semibold text-primary">{row.me}</span>
+                  <span className="text-right text-muted">{row.agency}</span>
+                </div>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 

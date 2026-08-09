@@ -9,6 +9,7 @@ import StatsSection from "@/components/StatsSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import TechStackMarquee from "@/components/TechStackMarquee";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <TechStackMarquee />
         <StatsSection />
         <ServicesSection />
         <PortfolioSection />

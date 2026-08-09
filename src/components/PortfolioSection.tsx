@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, X } from "lucide-react";
+import { ArrowUpRight, BarChart3, X } from "lucide-react";
 import Reveal from "./Reveal";
 
 const projects = [
@@ -11,18 +11,21 @@ const projects = [
     title: "Ecommerce Store",
     desc: "A fully responsive modern e-commerce platform with seamless checkout, product management, and payment integration built for scale.",
     tag: "E-commerce",
+    metric: "2.4× conversion rate",
   },
   {
     video: "gym.mp4",
     title: "Gym & Fitness",
     desc: "A dynamic fitness brand website featuring class scheduling, trainer profiles, membership plans, and engaging visuals.",
     tag: "Health & Fitness",
+    metric: "500+ members enrolled",
   },
   {
     video: "real estate.mp4",
     title: "Real Estate",
     desc: "A premium real estate marketplace with property listings, virtual tours, mortgage calculators, and agent matching.",
     tag: "Real Estate",
+    metric: "3× more property inquiries",
   },
 ];
 
@@ -210,6 +213,15 @@ function ProjectCard({ project, index, inView, onDemoClick }: { project: (typeof
                 >
                   <TypewriterText text={project.desc} startDelay={2.0 + index * 0.15} />
                 </motion.p>
+                <motion.div
+                  className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary"
+                  style={{ transformStyle: "preserve-3d" }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={cardInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 2.7 + index * 0.15, duration: 0.5 }}
+                >
+                  <BarChart3 size={14} /> {project.metric}
+                </motion.div>
                 <motion.div
                   className="mt-6"
                   style={{ transformStyle: "preserve-3d" }}
